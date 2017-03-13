@@ -3,6 +3,8 @@ package com.codeclan.movieshomework;
 import java.util.ArrayList;
 import com.codeclan.movieshomework.Movie;
 
+import static android.R.id.list;
+
 /**
  * Created by user on 13/03/2017.
  */
@@ -40,8 +42,29 @@ public class Rankings {
         return result.getTitle();
     }
 
-    public String getLastMovie(){
+    public String getMovieWithRanking(int ranking){
+        for (Movie movie : movies)
+            if (movie.getRanking() == (ranking)){
+                return movie.getTitle();
+            }
+            return null;
+    }
 
+    public String getLastMovie(){
+        int listSize = getLength();
+        String movieName = getMovieAtIndex(listSize - 1);
+        return movieName;
+    }
+
+    public void removeLastMovie(){
+        int listSize = getLength();
+        movies.remove(listSize - 1);
+    }
+
+    public void replaceLastMovie(){
+        removeLastMovie();
+        Movie newMovie = new Movie("Toy Story", "Children", 1);
+        movies.add(newMovie);
     }
 
 }

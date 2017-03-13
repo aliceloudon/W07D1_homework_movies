@@ -29,8 +29,28 @@ public class RankingsTest {
     }
 
     @Test
+    public void testGetMovieWithRanking(){
+        Rankings movies = new Rankings();
+        assertEquals("Jaws II", movies.getMovieWithRanking(2));
+    }
+
+    @Test
+    public void testGetLastMovie(){
+        Rankings movies = new Rankings();
+        assertEquals("Jaws III", movies.getLastMovie());
+    }
+
+    @Test
+    public void testRemoveLastMovie(){
+        Rankings movies = new Rankings();
+        movies.removeLastMovie();
+        assertEquals("Jaws II", movies.getLastMovie());
+    }
+
+    @Test
     public void testReplaceLastMovie(){
         Rankings movies = new Rankings();
+        movies.replaceLastMovie();
         assertEquals("Toy Story", movies.getLastMovie());
     }
 
