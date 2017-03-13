@@ -10,13 +10,28 @@ import static org.junit.Assert.*;
 
 public class RankingsTest {
 
-    Movie movie1;
-    Movie movie2;
+    @Test
+    public void getMoviesTest(){
+        Rankings movies = new Rankings();
+        assertNotNull(movies.getMovies());
+    }
 
-    @Before
-    public void before(){
-        movie1 = new Movie("Toy Story", "Children", 9);
-        movie2 = new Movie("Silver Linings Playbook", "Romance", 8);
+    @Test
+    public void testSetUpMovies(){
+        Rankings movies = new Rankings();
+        assertEquals(3, movies.getLength());
+    }
+
+    @Test
+    public void testGetMovieAtIndex(){
+        Rankings movies = new Rankings();
+        assertEquals("Jaws", movies.getMovieAtIndex(0));
+    }
+
+    @Test
+    public void testReplaceLastMovie(){
+        Rankings movies = new Rankings();
+        assertEquals("Toy Story", movies.getLastMovie());
     }
 
 }
