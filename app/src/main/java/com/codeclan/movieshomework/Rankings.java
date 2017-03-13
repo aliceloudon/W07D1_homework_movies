@@ -67,4 +67,12 @@ public class Rankings {
         movies.add(newMovie);
     }
 
+    public String getMovieGenreWithTitle(String title){
+        for (Movie movie : movies)
+            if (movie.getTitle() == (title)){
+                return movie.getGenre();
+            }
+        return null;
+    }
+
 }

@@ -54,4 +54,10 @@ public class RankingsTest {
         assertEquals("Toy Story", movies.getLastMovie());
     }
 
+    @Test
+    public void testGetMovieGenreWithTitle(){
+        Rankings movies = new Rankings();
+        assertEquals("Horror", movies.getMovieGenreWithTitle("Jaws"));
+    }
+
 }
