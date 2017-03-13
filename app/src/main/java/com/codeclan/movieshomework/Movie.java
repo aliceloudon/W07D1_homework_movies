@@ -8,9 +8,9 @@ public class Movie {
 
     private String title;
     private String genre;
-    private double ranking;
+    private int ranking;
 
-    public Movie (String title, String genre, double ranking){
+    public Movie (String title, String genre, int ranking){
         this.title = title;
         this.genre = genre;
         this.ranking = ranking;
@@ -32,11 +32,17 @@ public class Movie {
         this.genre = genre;
     }
 
-    public double getRanking() {
+    public int getRanking() {
         return ranking;
     }
 
-    public void setRanking(double ranking) {
+    public void setRanking(int ranking) {
         this.ranking = ranking;
     }
+
+    @Override
+    public String toString(){
+        return "Title: " + getTitle() + ", Genre: " + getGenre() + ", Ranking: " + getRanking();
+    }
+
 }
