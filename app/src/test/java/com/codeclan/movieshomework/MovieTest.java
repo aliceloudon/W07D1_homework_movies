@@ -15,12 +15,17 @@ public class MovieTest {
 
     @Before
     public void before(){
-        movie = new movie("Milk", "drama", 8.0);
+        movie = new Movie("Milk", "drama", 8.0);
     }
 
     @Test
-    public void testMovieSetup(){
+    public void testMovieSetupTitle(){
         assertEquals("Milk", movie.getTitle());
     }
-    
+
+    @Test
+    public void testMovieSetupGenre(){
+        assertEquals("drama", movie.getGenre());
+    }
+
 }
