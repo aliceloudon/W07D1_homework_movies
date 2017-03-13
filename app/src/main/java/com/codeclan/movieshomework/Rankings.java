@@ -8,8 +8,16 @@ import java.util.ArrayList;
 
 public class Rankings {
 
-    ArrayList<String> Movies;
+    private ArrayList<Movie> movies;
 
+    public Rankings(){
+        movies = new ArrayList<Movie>();
+    }
 
+    public void addMovie(Movie movie){
+        movies.add(movie);
+    }
 
 }
+
+
