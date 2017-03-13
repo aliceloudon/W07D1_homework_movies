@@ -1,7 +1,6 @@
 package com.codeclan.movieshomework;
 
 import org.junit.*;
-import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 /**
@@ -33,7 +32,7 @@ public class MovieTest {
     }
 
     @Test
-    public void testToString(){
+    public void testReturnToString(){
         assertEquals("Title: Milk, Genre: drama, Ranking: 8", movie.toString());
     }
 
